@@ -1,15 +1,8 @@
 // VARIABLES-PÁGINAS 
-const initDiv = document.getElementById("init");
-const loginDiv = document.getElementById("login");
-const homeDiv = document.getElementById("home");
 const gameDiv = document.getElementById("game");
 const resultsDiv = document.getElementById("results");
 
 // VARIABLES-NAV
-const navNav = document.getElementById("navNav");
-const initNav = document.getElementById("initNav");
-const loginNav = document.getElementById("loginNav");
-const homeNav = document.getElementById("homeNav");
 const gameNav = document.getElementById("gameNav");
 const resultsNav = document.getElementById("resultsNav");
 
@@ -17,7 +10,6 @@ const resultsNav = document.getElementById("resultsNav");
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const goToGameBtn = document.getElementById("goToGameBtn");
-const homeButtons = homeDiv.querySelectorAll("button");
 
 // VARIABLES-ELEMENTOS
 const questionContainerElement = document.getElementById("question-container");
@@ -34,32 +26,7 @@ const usernameValue = document.getElementById("usernameValue");
 
 // HIDE AND GO - PAGES
 function hideViews() {
-  initDiv.classList.add("hide");
-  loginDiv.classList.add("hide");
-  homeDiv.classList.add("hide");
-  gameDiv.classList.add("hide");
   resultsDiv.classList.add("hide");
-  loginNav.classList.add("hide");
-}
-
-window.onload = function(e) {
-  e.preventDefault();
-  let logo = document.getElementById('init');
-
-  setTimeout(function() {
-    logo.style.display = 'none';
-    goLogin(); // Llamada a la función goLogin() después de 5 segundos
-  }, 5000);
-};
-
-function goLogin() {
-  hideViews();
-  loginDiv.classList.remove("hide");
-}
-
-function goHome() {
-  hideViews();
-  homeDiv.classList.remove("hide");
 }
 
 function goGame() {
@@ -72,22 +39,6 @@ function goResults() {
   hideViews();
   resultsDiv.classList.remove("hide");
   showResultsTable();
-}
-
-function onSubmit(e) {
-  e.preventDefault();
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const userObj = { username, password };
-  localStorage.setItem("user", JSON.stringify(userObj));
-  mostrarPantallaNAME();
-}
-
-function mostrarPantallaNAME() {
-  const user = JSON.parse(localStorage.getItem("user"));
-  if (user) {
-    usernameValue.textContent = user.username;
-  }
 }
 
 function decodeHTML(html) {
@@ -232,9 +183,6 @@ homeButtons.forEach((button) => {
 });
 
 
-
-  loginNav.addEventListener("click", goLogin);
-  homeNav.addEventListener("click", goHome);
   gameNav.addEventListener("click", goGame);
   resultsNav.addEventListener("click", goResults);
   
