@@ -1,21 +1,18 @@
 * {
-    font-family: 'Unbounded';
+  font-family: 'Unbounded', sans-serif;
 }
 
 .hide {
-    display: none;
-  }
-  
-
-nav {
-    font-weight: 200;
+  display: none;
 }
 
+nav {
+  font-weight: 200;
+}
 
 body {
-    background-image: url(/assets/img/fondoLogin.png);
-    color: white;
-
+  background-image: url(/assets/img/fondoLogin.png);
+  color: white;
 }
 
 #init {
@@ -28,250 +25,308 @@ body {
 }
 
 #login {
-    position: relative;
-  }
-  
-  #login .container {
-    position: relative;
-  }
-  
-  .logo {
-    position: absolute;
-    width: 291px;
-    height: 264px;
-    left: 50px;
-    top: 20px;
-    background: url(/assets/img/logoJunking.png) no-repeat center center;
-    background-size: contain;
-  }
-  
-  
-  h2 {
-    position: absolute;
-    width: 189px;
-    height: 38px;
-    left: 37px;
-    top: 330px;
-    font-family: 'Unbounded', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 31px;
-    line-height: 38px;
-    color: #FFFFFF;
-  }
-  
-  #login-form {
-    position: absolute;
-    width: 320px;
-    height: 140px;
-    left: 37px;
-    top: 396px;
-  }
-  
-  .form-group {
-    position: absolute;
-    width: 320px;
-    height: 52px;
-    left:0px;
-    top: 1px;
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.19);
-    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.11);
-    border-radius: 13px;
-  }
+  position: relative;
+}
 
-  .form-group:nth-child(1) {
-    top: 1px;
-  }
-  
-  .form-group:nth-child(2) {
-    top: 85px;
-  }
-  
-  
-  #username,
-  #password {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border: none;
-    background: transparent;
-    color: #FFFFFF;
-    outline: none;
-  }
-  
-  button[type="submit"] {
-    position: absolute;
-    width: 197px;
-    height: 49px;
-    left: 63px;
-    top: 250px;
-    padding: 10px;
-    border: none;
-    background-color: #6BFFB8;
-    color: #131313;
-    
-    border-radius: 13px;
-    cursor: pointer;
-    filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.27));
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #6BFFB8;
-        font-family: 'Unbounded', sans-serif;
-        font-weight: 400
-  }
-  
-  #message {
-    position: absolute;
-    top: 250px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #FFFFFF;
-    font-size: 14px;
-  }
+#login .container {
+  position: relative;
+}
 
-  #usernameValue {
-    color: #6BFFB8;
-  }
-  
-  .home-heading {
-    position: absolute;
-    width: 260px;
-    height: 38px;
-    left: 34px;
-    top: 220px;
-    font-family: 'Unbounded';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 31px;
-    line-height: 38px;
-  }
-  
-  #gameSelection {
-    position: absolute;
-    width: 400px;
-    height: 149px;
-    left: 34px;
-    top: 280px;
-  }
-  
-  .goToGameBtn {
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.19);
-    border: none;
-    color: #ffffff;
-    padding: 5px 12px; 
-    margin-right: 5px;
-    margin-top: 10px;
-    font-size: 12px;
-    transition: background-color 0.3s;
-    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.11);
-    border-radius: 13px;
-    text-transform: uppercase;
-  }
-  
-  .goToGameBtn:hover {
-    background-color: #6BFFB8;
-    color: #272727;
-    outline: none;
-  }
+.logo {
+  position: absolute;
+  width: 291px;
+  height: 264px;
+  left: 50px;
+  top: 20px;
+  background: url(/assets/img/logoJunking.png) no-repeat center center;
+  background-size: contain;
+}
 
-  .logoPeque {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 53px;
-    top: 1px;
-  }
-  
-  p {
-    margin-bottom: 0px;
-    font-weight: 100;
-  }
+h2 {
+  position: absolute;
+  width: 189px;
+  height: 38px;
+  left: 37px;
+  top: 330px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 38px;
+  color: #FFFFFF;
+}
 
-  .top-played {
-    margin-top: 70px;
-    white-space: nowrap;
-  }
+#login-form {
+  position: absolute;
+  width: 320px;
+  height: 140px;
+  left: 37px;
+  top: 396px;
+}
 
+.form-group {
+  position: absolute;
+  width: 320px;
+  height: 52px;
+  left: 0;
+  top: 1px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.19);
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.11);
+  border-radius: 13px;
+}
 
-  #popularGames {
-    margin-top: 550px;
-  }
-  
-  .top-played {
-    margin-top: 120px;
-    white-space: nowrap;
-  }
-  
-  .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-  
-  .card {
-    position: relative;
-    width: 150px;
-    height: 200px;
-    margin: 0 10px;
-    background-color: #131313;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(/assets/img/thorCard.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .card-title {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-    font-family: 'Unbounded';
-    font-weight: 600;
-    font-size: 18px;
-    transform: translateY(-50%);
-  }
-  
-  .card-details {
-    position: absolute;
-    top: 85%;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    text-align: center;
-    color: #6BFFB8;
-    font-family: 'Unbounded';
-    font-weight: 400;
-    font-size: 14px;
-  }
-  
-  .card-button {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
+.form-group:nth-child(1) {
+  top: 1px;
+}
 
-  }
-  
-  .play-button {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #6BFFB8;
-    border-radius: 13px;
-    color: #131313;
-  }
+.form-group:nth-child(2) {
+  top: 85px;
+}
+
+#username,
+#password {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #FFFFFF;
+  outline: none;
+}
+
+button[type="submit"] {
+  position: absolute;
+  width: 197px;
+  height: 49px;
+  left: 63px;
+  top: 250px;
+  padding: 10px;
+  border: none;
+  background-color: #6BFFB8;
+  color: #131313;
+  border-radius: 13px;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.27));
+}
+
+button[type="submit"]:hover {
+  background-color: #6BFFB8;
+  font-weight: 400;
+}
+
+#message {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+#usernameValue {
+  color: #6BFFB8;
+}
+
+.home-heading {
+  position: absolute;
+  width: 260px;
+  height: 38px;
+  left: 34px;
+  top: 220px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 38px;
+}
+
+#gameSelection {
+  position: absolute;
+  width: 400px;
+  height: 149px;
+  left: 34px;
+  top: 280px;
+}
+
+#goToGameBtn {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.19);
+  border: none;
+  color: #ffffff;
+  padding: 5px 12px;
+  margin-right: 5px;
+  margin-top: 10px;
+  font-size: 12px;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.11);
+  border-radius: 13px;
+  text-transform: uppercase;
+}
+
+#goToGameBtn:hover {
+  background-color: #6BFFB8;
+  color: #272727;
+  outline: none;
+}
+
+.logoPeque {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 53px;
+  top: 1px;
+}
+
+p {
+  margin-bottom: 0;
+  font-weight: 100;
+}
+
+.top-played {
+  margin-top: 120px;
+  white-space: nowrap;
+}
+
+#popularGames {
+  margin-top: 550px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  margin: 0 10px;
+  background-color: #131313;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(/assets/img/thorCard.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  transform: translateY(-50%);
+}
+
+.card-details {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  color: #6BFFB8;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.card-button {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.play-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #6BFFB8;
+  border-radius: 13px;
+  color: #131313;
+}
+
+#game .controls {
+  margin-top: 20px;
+}
+
+#game #start-btn,
+#game #next-btn {
+  background-color: #6BFFB8;
+  color: #131313;
+  margin-right: 10px;
+}
+
+#results {
+  display: none;
+  text-align: center;
+  color: #ffffff;
+}
+
+#results h2 {
+  color: #ffffff;
+}
+
+#results #results-table {
+  margin-top: 20px;
+}
+
+#results #results-table th {
+  padding: 10px;
+  background-color: #6BFFB8;
+  color: #131313;
+}
+
+#results #results-table td {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.19);
+  color: #ffffff;
+}
+
+#results #results-table td.correct {
+  background-color: #6BFFB8;
+  color: #131313;
+}
+
+#results #results-table td.wrong {
+  background-color: rgba(255, 255, 255, 0.19);
+  color: #ffffff;
+}
+
+#question {
+  display: flex;
+  width: 261px;
+  height: 188px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.11);
+  padding: 20px;
+  margin-left: 65px;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+#answer-btn {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.14);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

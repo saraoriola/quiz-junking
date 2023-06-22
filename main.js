@@ -16,8 +16,7 @@ const resultsNav = document.getElementById("resultsNav");
 // VARIABLES-BOTONES
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
-const goToGameBtn = document.getElementById("goToGameBtn");
-const homeButtons = homeDiv.querySelectorAll("button");
+const homeButtons = document.getElementById("goToGameBtn");
 
 // VARIABLES-ELEMENTOS
 const questionContainerElement = document.getElementById("question-container");
@@ -27,7 +26,7 @@ const answerButtonsElement = document.getElementById("answer-buttons");
 // VARIABLES-CONTADOR
 let score = 0;
 let partidaActual = 1;
-const resultadosPartidas = []; 
+const resultadosPartidas = [];
 
 // VARIABLES-VALUE
 const usernameValue = document.getElementById("usernameValue");
@@ -42,11 +41,11 @@ function hideViews() {
   loginNav.classList.add("hide");
 }
 
-window.onload = function(e) {
+window.onload = function (e) {
   e.preventDefault();
   let logo = document.getElementById('init');
 
-  setTimeout(function() {
+  setTimeout(function () {
     logo.style.display = 'none';
     goLogin(); // Llamada a la función goLogin() después de 5 segundos
   }, 5000);
@@ -64,9 +63,9 @@ function goHome() {
 
 function goGame() {
   hideViews();
+  console.log("hola")
   gameDiv.classList.remove("hide");
 }
-
 
 function goResults() {
   hideViews();
@@ -95,6 +94,37 @@ function decodeHTML(html) {
   txt.innerHTML = html;
   return txt.value;
 }
+function showResultsTable() {
+  const table = document.getElementById("results-table");
+  table.innerHTML = ""; // Limpiar la tabla antes de mostrar los resultados
+
+  // Crear encabezados de columna
+  const headerRow = document.createElement("tr");
+  const userHeader = document.createElement("th");
+  userHeader.textContent = "Username";
+  const scoreHeader = document.createElement("th");
+  scoreHeader.textContent = "Score";
+  headerRow.appendChild(userHeader);
+  headerRow.appendChild(scoreHeader);
+  table.appendChild(headerRow);
+
+  // Agregar filas de resultados
+  resultadosPartidas.forEach((resultado) => {
+    const row = document.createElement("tr");
+    const userCell = document.createElement("td");
+    userCell.textContent = resultado.username;
+    const scoreCell = document.createElement("td");
+    scoreCell.textContent = resultado.score;
+    row.appendChild(userCell);
+    row.appendChild(scoreCell);
+    table.appendChild(row);
+  });
+
+  // Mostrar la tabla de resultados
+  table.classList.remove("hide");
+}
+
+
 
 axios
   .get("https://opentdb.com/api.php?amount=10&category=29&difficulty=easy&type=multiple")
@@ -218,23 +248,14 @@ function login() {
 
 const loginForm = document.getElementById("login-form");
 if (loginForm) {
-  loginForm.addEventListener("submit", function(event) {
+  loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
     login();
   });
 }
 
-
-homeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    goGame();
-  });
-});
-
-
-
-  loginNav.addEventListener("click", goLogin);
-  homeNav.addEventListener("click", goHome);
-  gameNav.addEventListener("click", goGame);
-  resultsNav.addEventListener("click", goResults);
-  
+homeButtons.addEventListener("click", goGame)
+loginNav.addEventListener("click", goLogin);
+homeNav.addEventListener("click", goHome);
+gameNav.addEventListener("click", goGame);
+resultsNav.addEventListener("click", goResults);
